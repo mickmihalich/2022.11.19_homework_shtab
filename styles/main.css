@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body {
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+}
+
+.container {
+	/*width: 1200px;*/
+	margin: 0 auto;
+	box-sizing: border-box;
+	/*padding: 0 15px;		*/
+}
+
+
+@media screen and (max-width: 797.98px) {
+}
