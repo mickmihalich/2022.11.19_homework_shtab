@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 body {
-	overflow-x: hidden;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
-	font-size: 32px;
+	
+}
+
+a {
+	text-decoration: none;
 }
 
 .container {
@@ -14,6 +15,20 @@ body {
 	/*padding: 0 15px;		*/
 }
 
+.head_menu_container {
+	background-color: #F5F7FA;
+	border: 1px solid #9C9D9E;
+	box-sizing: border-box;	
+}
+
+.head_menu {
+	min-height: 2rem; /* тимчасово */
+	display: flex;
+}
+
+.head_menu_item {
+	display: block;
+}
 
 @media screen and (max-width: 797.98px) {
 }
