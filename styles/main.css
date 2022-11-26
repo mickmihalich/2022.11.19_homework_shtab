@@ -1,34 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+/* Webfont: MacPawFixelDisplay-SemiBold */
+@font-face {
+    font-family: 'MacPawFixelDisplaySemiBold';
+    src: url('../fonts/MacPawFixelDisplay-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/MacPawFixelDisplay-SemiBold.otf') format('opentype'); /* Safari, Android, iOS */
+	font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: MacPawFixelDisplay-Bold */
+@font-face {
+    font-family: 'MacPawFixelDisplayBold';
+    src: url('../fonts/MacPawFixelDisplay-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/MacPawFixelDisplay-Bold.otf') format('opentype'); /* Safari, Android, iOS */
+	font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 
 body {
-	
+	font-size: 14px; 
+	font-family: "MacPawFixelDisplaySemiBold", Georgia;	
 }
+
 
 a {
 	text-decoration: none;
 }
 
 .container {
-	/*width: 1200px;*/
+	width: 1200px;
 	margin: 0 auto;
+	display: flex;
 	box-sizing: border-box;
-	/*padding: 0 15px;		*/
+	/*border: 1px solid rgba(255, 0, 255, 0.348); /* тимчасово */
+	border: 1px solid magenta;
+	/*background-color: rgba(255, 0, 255, 0.01); /* тимчасово */
+	padding: 0 15px;		
 }
 
 .head_menu_container {
 	background-color: #F5F7FA;
-	border: 1px solid #9C9D9E;
+	/*border: 1px solid #9C9D9E; /* тимчасово */
+	box-sizing: border-box;	
+}
+.head_menu_container .container {
+	justify-content: space-between;
+}
+
+.head_menu {	
+	display: flex;	
 	box-sizing: border-box;	
 }
 
-.head_menu {
+.head_menu_item {
 	min-height: 2rem; /* тимчасово */
-	display: flex;
+	display: flex; /* для зручного центрування (див. нижче) */
+	align-items: center;	/* в флексах це просто */
+	box-sizing: border-box;
+	/*border: 1px solid #d8d9da;*/
+	margin: 0 5px;
+	padding: 0 5px;
+	color: #979FAD;	
+
+	/* underground_line for hover */
+	border-bottom: 2px solid #FFAF1E00;
+}
+.head_menu_item:first-child {
+	margin-left: 0;
+	padding-left: 0;
 }
 
-.head_menu_item {
-	display: block;
+.login_container {
+	font-family: "MacPawFixelDisplayBold", Georgia;	
+	/*font-weight: 900;*/
+	
+	display: flex;
+	align-items: center;	/* в флексах це просто / центрування за висотою */
+
+	box-sizing: border-box;
+	/*border: 1px solid rgba(0, 255, 26, 0.348); /* тимчасово */
+	/*background-color: rgba(0, 255, 157, 0.01); /* тимчасово */
 }
+
+.hr {	
+	box-sizing: border-box;
+	border: 1px solid #333333; /* тимчасово */	
+	height: 1rem;
+}
+
+.login_item {
+	min-height: 2rem; /* тимчасово */
+	color: #333333;
+	box-sizing: border-box;
+	margin: 0 5px;
+	padding: 0 5px;
+	display: flex; /* для зручного центрування (див. нижче) */
+	align-items: center;	/* в флексах це просто */
+	
+	/* underground_line for hover */
+	border-bottom: 2px solid #FFAF1E00;	
+}
+
+.head_menu_item:hover, .login_item:hover {
+	border-bottom: 2px solid #FFAF1E;
+	color: #FFAF1E;
+
+	/*filter: drop-shadow(1px -1px 0px rgba(0, 0, 0, 0.7));*/
+}
+
+.person:hover {
+	background-image: url(../images/person-fill_hover.svg);
+}
+
+.person {
+	background-image: url(../images/person-fill.svg);
+	background-size: 1rem 1rem;
+	background-position: left 0.3rem;
+	background-repeat: no-repeat;
+
+	padding-left: 1.4rem;
+}
+
+.head_logo_cart {
+	justify-content: space-between;
+	min-height: 4rem;
+	/*background-color: #FFAF1E;*/
+}
+
+.logo {
+	display: block;
+	background-image: url(../images/shtab.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*height: 3rem;*/
+	width: 9rem;	
+	border: 1px solid magenta;
+	box-sizing: border-box;
+}
+
+.logo:hover {}
 
 @media screen and (max-width: 797.98px) {
 }
