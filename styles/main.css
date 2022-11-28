@@ -125,23 +125,29 @@ a {
 
 .head_logo_cart {
 	justify-content: space-between;
-	min-height: 4rem;
+	min-height: 5rem;
 	/*background-color: #FFAF1E;*/
 }
 
 .logo {
 	display: block;
-	background-image: url(../images/shtab.svg);
+	background-image: url(../images/shtab.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	/*height: 3rem;*/
 	width: 9rem;	
-	border: 1px solid magenta;
-	box-sizing: border-box;
+	border: 1px solid magenta; /* тимчасово */
+	box-sizing: border-box; /* тимчасово */
 }
 
-.logo:hover {}
+.logo:hover {
+	background-image: url(../images/shtabh.png);	
+}
+
+.cart {
+	
+}
 
 @media screen and (max-width: 797.98px) {
 }
