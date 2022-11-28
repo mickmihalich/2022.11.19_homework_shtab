@@ -30,20 +30,24 @@ a {
 }
 
 .container {
-	width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 	display: flex;
 	box-sizing: border-box;
 	/*border: 1px solid rgba(255, 0, 255, 0.348); /* тимчасово */
-	border: 1px solid magenta;
+	/*border: 1px solid magenta;*/
 	/*background-color: rgba(255, 0, 255, 0.01); /* тимчасово */
-	padding: 0 15px;		
+	padding: 0 15px;	
+	
+	flex-wrap: wrap;
 }
 
 .head_menu_container {
 	background-color: #F5F7FA;
-	/*border: 1px solid #9C9D9E; /* тимчасово */
+	border: 1px solid #EAEBED;
+	; /* тимчасово */
 	box-sizing: border-box;	
+
 }
 .head_menu_container .container {
 	justify-content: space-between;
@@ -51,6 +55,7 @@ a {
 
 .head_menu {	
 	display: flex;	
+	/*flex-wrap: wrap; це пізніше*/
 	box-sizing: border-box;	
 }
 
@@ -136,8 +141,8 @@ a {
 	background-repeat: no-repeat;
 	background-position: center;
 	/*height: 3rem;*/
-	width: 9rem;	
-	border: 1px solid magenta; /* тимчасово */
+	min-width: 9rem;	
+	/*border: 1px solid magenta; /* тимчасово */
 	box-sizing: border-box; /* тимчасово */
 }
 
@@ -145,9 +150,80 @@ a {
 	background-image: url(../images/shtabh.png);	
 }
 
+.cart_box {
+	/*border: 1px solid magenta; /* тимчасово */
+	/*box-sizing: border-box; /* тимчасово */	
+	display: flex;
+	/*align-items:center;*/
+}
+
+.cart_box  div {
+	/*border: 1px solid magenta; /* тимчасово */
+	/*box-sizing: border-box; /* тимчасово */				
+}
+
 .cart {
+	background-image: url(../images/cart.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 32px;
+	min-width: 45px;
+	display: flex;
 	
 }
 
-@media screen and (max-width: 797.98px) {
+.quantity{
+	width: 100%;
+	background-image: url(../images/1-circle-fill.svg);
+	background-repeat: no-repeat;
+	background-position: right 10px top 17px;	
+}
+
+.cart_content {
+	display: flex;
+	/*align-items: center;   по горизонту*/
+	flex-direction: column;
+	justify-content: center;
+	min-width: 150px;
+	padding: 0 5px;
+}
+
+.in_cart {
+	font-family: "MacPawFixelDisplayBold", Georgia;	
+}
+
+.cart_price {
+	color: #979FAD;	
+}
+
+
+
+.search_container_for_background {
+	background-color: #FFAF1E;
+	border: 1px solid #dd9000; /* тимчасово */
+	box-sizing: border-box; /* тимчасово */	
+}
+.search_box {
+	min-height: 4rem;
+	border: 1px solid magenta; /* тимчасово */
+	box-sizing: border-box; /* тимчасово */	
+}
+
+
+@media screen and (max-width: 709.98px) {
+	.container {
+		width: 100%;
+	}
+	.head_menu {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 709.98px) {
+	.container {
+		width: 100%;
+	}
+	.head_menu {
+		flex-wrap: wrap;
+		width: 100%;
+	}
 }

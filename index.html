@@ -23,16 +23,29 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="icon" href="./images/icon.svg" type="image/svg+xml">
     -->
+    <!-- передзавантаження logo при :hover та fonts -->
+    <link 
+        rel="preload" 
+        as="image" 
+        href="./images/shtabh.png"         
+    >   
+    <link 
+        rel="preload" 
+        href="./fonts/MacPawFixelDisplay-SemiBold.woff2" 
+        as="font" 
+        type="font/woff2" 
+        crossorigin
+    > 
 </head>
 <body>    
     <div class="head_menu_container">
         <div class="container">
-            <div class="head_menu">
+            <grid class="head_menu">
                 <a href="./" class="head_menu_item">АвтоРозбирачка</a>
                 <a href="./" class="head_menu_item">Позбутися</a>
                 <a href="./" class="head_menu_item">Отримати&nbsp;сплачене</a>
                 <a href="./" class="head_menu_item">Потеревенити</a>
-            </div>
+            </grid>
             <div class="login_container">
                 <a href="./" class="login_item person">                    
                     Увійти
@@ -44,10 +57,22 @@
     </div>
     <div class="head_logo_cart container">
         <a href="./" class="logo"></a>
-        <div class="cart">
-            cart
-        </div>
+        <a href="./" class="cart_box">
+            <div class="cart">
+                <div class="quantity">&nbsp;</div>
+            </div>
+            <div class="cart_content">
+                <div class="in_cart">У кошику</div>
+                <div class="cart_price">1 товар на 500 грн.</div>        
+            </div>
+        </a>
     </div>
+    <div class="search_container_for_background">
+        <class class="search_box container">
+            search_box
+        </class>        
+    </div>
+
     <main class="container">
          Main
     </main>
