@@ -18,6 +18,9 @@
     text-rendering: optimizeLegibility;
 }
 
+*:focus {
+	outline: 1px dotted #FFAF1E;	
+}
 
 body {
 	font-size: 14px; 
@@ -54,9 +57,13 @@ a {
 }
 
 .head_menu {	
-	display: flex;	
+	/* display: flex; - вирішив спробувати грід */
 	/*flex-wrap: wrap; це пізніше*/
 	box-sizing: border-box;	
+	display: inline-grid;
+	grid-template-columns: repeat(4, auto);
+	width: 450px;
+	justify-items: center;
 }
 
 .head_menu_item {
@@ -176,7 +183,7 @@ a {
 	width: 100%;
 	background-image: url(../images/1-circle-fill.svg);
 	background-repeat: no-repeat;
-	background-position: right 10px top 17px;	
+	background-position: right 11px top 20px;	
 }
 
 .cart_content {
@@ -190,13 +197,12 @@ a {
 
 .in_cart {
 	font-family: "MacPawFixelDisplayBold", Georgia;	
+	color: #333333;
 }
 
 .cart_price {
 	color: #979FAD;	
 }
-
-
 
 .search_container_for_background {
 	background-color: #FFAF1E;
@@ -209,21 +215,57 @@ a {
 	box-sizing: border-box; /* тимчасово */	
 }
 
+.cart_box:hover {
+	filter: drop-shadow(1px 1px 1px #FFAF1Eee);
+}
 
-@media screen and (max-width: 709.98px) {
+
+@media screen and (max-width: 719.98px) {
 	.container {
 		width: 100%;
 	}
 	.head_menu {
 		width: 100%;
+		justify-content: space-between;
+	}	
+	.login_container {
+		width: 100%;
+		justify-content: right;
+	}
+
+}
+
+@media screen and (max-width: 519.98px) {
+	.head_menu {	
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
 	}
 }
-@media screen and (max-width: 709.98px) {
+
+@media screen and (max-width: 379.98px) {
+	.logo {
+		width: 144px;
+		min-height: 80px;
+	}
+	.cart_box {
+		min-height: 80px;
+	}
+	.head_logo_cart {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 319.98px) {
+	.head_menu {	
+		grid-template-columns: 1fr;		
+	}
 	.container {
-		width: 100%;
+		min-width: 210px;
 	}
-	.head_menu {
-		flex-wrap: wrap;
-		width: 100%;
+	.login_container {	
+		justify-content: center;
 	}
 }
+
+
+
