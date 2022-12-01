@@ -35,22 +35,33 @@
         as="font" 
         type="font/woff2" 
         crossorigin
+    >
+    <link 
+        rel="preload" 
+        as="image" 
+        href="./images/shtab_h.png"         
+    > 
+    <link 
+    rel="preload" 
+    as="image" 
+    href="./images/shtab_.png"         
     > 
 </head>
 <body>    
     <div class="head_menu_container">
         <div class="container">
-            <grid class="head_menu">
+            <a href="./" class="head_menu_burger"></a>
+            <grid class="head_menu">                
                 <a href="./" class="head_menu_item">АвтоРозбирачка</a>
                 <a href="./" class="head_menu_item">Позбутися</a>
                 <a href="./" class="head_menu_item">Отримати&nbsp;сплачене</a>
                 <a href="./" class="head_menu_item">Потеревенити</a>
             </grid>
             <div class="login_container">
-                <a href="./" class="login_item person">                    
+                <a href="./" class="login_item person" title="Увійти">                    
                     Увійти
                 </a>
-                <span class="hr"></span>
+                <span class="login_item_vr"></span>
                 <a href="./" class="login_item">Реєстрація</a>                
             </div>
         </div>
@@ -64,13 +75,23 @@
             <div class="cart_content">
                 <div class="in_cart">У кошику</div>
                 <div class="cart_price">1 товар на 500 грн.</div>        
+                <div class="cart_only_price">500 грн.</div>
             </div>
         </a>
     </div>
     <div class="search_container_for_background">
-        <class class="search_box container">
-            search_box
-        </class>        
+        <divs class="search_box container">
+            <select class="search_select">
+                <option value="number">За номером</option>
+                <option value="name">За назвою</option>
+            </select>
+            <input 
+                class="search_input" 
+                type="text" 
+                name="input" 
+                placeholder="Номер запчастини"
+            >
+        </div>        
     </div>
 
     <main class="container">
