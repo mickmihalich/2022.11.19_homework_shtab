@@ -215,12 +215,6 @@ a {
 	box-sizing: border-box; /* тимчасово */	
 }
 
-.search_box {
-	min-height: 2rem;
-	border: 1px solid magenta; /* тимчасово */
-	box-sizing: border-box; /* тимчасово */	
-}
-
 .cart_box:hover {
 	filter: drop-shadow(1px 1px 1px #FFAF1Eee);
 }
@@ -240,6 +234,10 @@ a {
 }
 
 .search_box {
+	min-height: 2rem;
+	/*border: 1px solid magenta; /* тимчасово */
+	box-sizing: border-box; /* тимчасово */	
+
 	display: grid;
 
 	grid-template-columns: auto 1fr 120px;
@@ -268,6 +266,59 @@ a {
 	border-radius: 3px;
 }
 
+/* orange buttons */
+.buttons_style_red_white {	
+	background-color: #FFAF1E;
+	color: #ffffff;
+	border: 1px #FFFFFF solid;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+}
+
+.buttons_style_red_white:hover {
+	background-color: #ffffff;
+	color: #FFAF1E;
+	border: 1px #FFAF1E solid;
+}
+
+.buttons_style_red_white:active {
+	background-color: #ffffff;
+	color: #000;
+	border: 1px #000 solid;
+}
+
+/* selected buttons (filters) */
+.buttons_style_selected {
+	color: #000;
+	border: 1px #FFAF1E solid;
+	background-color: #ffffff;
+}
+
+.buttons_style_selected:hover {	
+	background-color: #FFAF1E;
+	/*color: #ffffff;*/
+}
+
+.buttons_style_selected:active {	
+	border: 1px #000 solid;
+}
+
+.search_button {	
+	background-image: url(../images/search_fff.svg);
+	background-position: left 7px center;
+	background-size: 1em;	
+	padding-left: 1em;
+	/*border-color: #ffffff;*/
+	width: 100px;
+}
+
+.search_button:hover {
+	background-image: url(../images/search_faf.svg);
+}
+
+.search_button:active {
+	background-image: url(../images/search.svg);
+}
 
 
 /* Адаптивно-альтернативне кохання */
@@ -283,6 +334,9 @@ a {
 		width: 100%;
 		justify-content: right;
 	}
+	.search_box {
+		padding: 7px;
+	}
 
 }
 
@@ -290,6 +344,15 @@ a {
 	.head_menu {	
 		grid-template-columns: 1fr 1fr;
 		justify-items: center;
+	}
+	.search_box {
+		grid-template-columns: 1fr;		
+		justify-items: center;
+		align-items: center;
+		grid-row-gap: 5px;		
+	}
+	.search_input {
+		width: 80%;
 	}
 }
 
@@ -376,7 +439,9 @@ a {
 		justify-content: center;
 	}
 
-	
+	body {
+		min-width: 200px;
+	}
 }
 
 
